@@ -1,0 +1,9 @@
+.row
+  .col-md-3
+    -if current_user.is_admin
+      = link_to new_item_path(weekday_id: params[:id]), class: 'btn btn-default' do
+        %i.glyphicon.glyphicon-plus
+        Create
+  .col-md-6
+    -@weekday.items.each do |item|
+      %p= item.name + " " + item.price.to_s

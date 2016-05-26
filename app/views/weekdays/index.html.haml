@@ -1,0 +1,6 @@
+.row
+  .col-md-12
+    .col-md-3
+      .col-md-6
+      - @weekdays.each do |weekday|
+        = link_to weekday.name, weekday_path(weekday)
